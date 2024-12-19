@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+
+<bean id="Autobean" class="com.gnan.Autowired" >
+<!-- autowire="byName" if we have only one var then we cn use this type of attribute-->
+
+    <property name="laptop" ref="lapbean" /><!-- setterInjection -->
+    <!-- <constructor-arg ref="lapbean"> --><!--constructor Injection is not working-->
+
+</bean>
+
+    
+<bean id="lapbean" class="com.gnan.Laptop"></bean>
+
+<bean id="desk" class="com.gnan.Desktop"></bean>
+
+</beans>

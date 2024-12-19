@@ -1,0 +1,35 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+
+    <bean id="bean2" class="com.gnan.SetterInj" >
+    
+    <property name="number" value="10"><!--spring is assigning value to a variable-->
+    </property><!--Property tag uses setter-->
+<!--<property name="number" value="10"/>    can also write like this "/" -self closeing tag -->
+    </bean>
+
+    <bean id="bean2.1" class="com.gnan.ConstructorInj">
+    <constructor-arg value="1423"/>
+    <!--With the help of constructor-arg tag the spring will
+        assign value to the var in perameterized constructor
+        if we have single var we can declare like this -->
+
+<!--
+if we have two or more variables with a sequence with the help of spring can assign value to var
+    <constructor-arg name="age1" value="1234">
+    </constructor-arg>
+    <constructor-arg name="number" value="1443223"
+      
+    if we have two or more variables with a sequence we can assign values to a var using spring
+    <constructor-arg index="0" value="123"/>-self closeing tag
+    <constructor-arg index="1" value="456"/>
+-->
+
+
+    </bean>
+</beans>

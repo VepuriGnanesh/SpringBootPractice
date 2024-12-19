@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+<bean id="bean3" class="com.gnan.FirstClass" autowire="byName"/>
+<!-- autowire="byName"/"byType"-(this attribute is optional)
+    if there are multiple beans / classes we use byName attribute-followed by App.java
+     if we use byType we have give primary="true" attribute as select this bean for autowireing this bean  -->
+
+<!--<bean id="bean1" class="" primary="true"/>
+    <bean id="bean2" class="" /> -->
+
+</beans>
