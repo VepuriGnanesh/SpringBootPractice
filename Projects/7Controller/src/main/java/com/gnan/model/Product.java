@@ -1,4 +1,4 @@
-package com.gnan._Controller.Model;
+package com.gnan.model;
 
 import org.springframework.stereotype.Component;
 

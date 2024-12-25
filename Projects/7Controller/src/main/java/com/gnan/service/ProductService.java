@@ -1,11 +1,11 @@
-package com.gnan._Controller.Service;
+package com.gnan.service;
 
 import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.gnan._Controller.Model.*;
+import com.gnan.model.*;
 @Service
 public class ProductService {
 
@@ -16,7 +16,13 @@ public class ProductService {
     public List<Product> getProducts()
     {
             return products;
-        
     }
+
+    // public Product getProductsById(int prodId)
+    // {
+    //     return products.stream()
+    //                    .filter(p->p.getProductsById()==prodId)
+    //                    .findFirst().get();
+    // }
     
 }
