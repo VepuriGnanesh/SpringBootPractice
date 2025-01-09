@@ -29,6 +29,7 @@ public class App
         ApplicationContext context2=new ClassPathXmlApplicationContext("spring.xml");
 
         ConstructorInj obj3=(ConstructorInj) context2.getBean("bean2.1");
+        
 
         System.out.println(obj3.age1);
 

@@ -3,9 +3,11 @@ package com.gnan.spring.mvc.get.and.put.mtds.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +24,7 @@ public class ProductController {
    @GetMapping("/Products")//requesting the controller to get the products
     public List<Product> getProducts()
     {
+        System.out.println(service.getProducts());
         return service.getProducts();
     }
     
@@ -34,10 +37,25 @@ public class ProductController {
         return service.getProductsById(prodId);
     }
 
-    @PostMapping("/Products")
+    @PostMapping("/Products")//
+    //is used to read/post the data from the 
     public void addProduct(@RequestBody Product prod)
     {
         System.out.println(prod);
         service.addProduct(prod);
     }
+
+    @PutMapping("/Products")//update data
+    public void updateProduct(@RequestBody Product prod)
+    {
+        System.out.println(prod);
+        service.updateProduct(prod);
+    }
+
+    @DeleteMapping("/Products/{prodId}")//Delete Data
+    public void deleteProduct(@PathVariable int prodId)
+    {
+        service.deleteProduct(prodId);
+    }
 }
+

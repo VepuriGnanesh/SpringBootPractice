@@ -38,8 +38,4 @@ public class SetterInj
     {
         System.out.println("This is Setter Injection.");
     }
-
-   
-
-    
 }

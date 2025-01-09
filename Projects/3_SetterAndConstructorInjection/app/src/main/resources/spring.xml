@@ -8,8 +8,8 @@
 
     <bean id="bean2" class="com.gnan.SetterInj" >
     
-    <property name="number" value="10"><!--spring is assigning value to a variable-->
-    </property><!--Property tag uses setter-->
+    <property name="number" value="10"/><!--spring is assigning value to a variable-->
+    </property><!--Property tag uses setter -->
 <!--<property name="number" value="10"/>    can also write like this "/" -self closeing tag -->
     </bean>
 
@@ -23,7 +23,8 @@
 if we have two or more variables with a sequence with the help of spring can assign value to var
     <constructor-arg name="age1" value="1234">
     </constructor-arg>
-    <constructor-arg name="number" value="1443223"
+    <constructor-arg name="number" value="1443223"/>
+    <constructor-arg name="repalle" value="522265"/>
       
     if we have two or more variables with a sequence we can assign values to a var using spring
     <constructor-arg index="0" value="123"/>-self closeing tag

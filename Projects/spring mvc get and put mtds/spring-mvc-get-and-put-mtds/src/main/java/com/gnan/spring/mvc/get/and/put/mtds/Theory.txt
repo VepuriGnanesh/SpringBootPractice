@@ -1,0 +1,73 @@
+CRUD operations
+
+Create -Post
+Read   -get
+Update -put
+Delete -Delete
+
+JPA
+Java Perspective Api
+
+ORM tool
+-Object Relational Mapping (tool) in computer science is a programming technique
+for converting data between a relational database and the memory of an object-oriented programming language.
+This creates, in effect, a virtual object database that can be used from within the programming language
+ 
+Alternative tools are
+-Hibernate
+Hibernate ORM (or simply Hibernate) is an object–relational mapping tool for the Java programming language.
+It provides a framework for mapping an object-oriented domain model to a relational database.
+
+-EclipseLink
+The EclipseLink JPA provides developers with a standards based Object-Relational persistence solution with
+additional support for many advanced features.
+
+-MyBatis
+MyBatis is a Java persistence framework that couples objects with stored procedures or SQL statements using
+an XML descriptor or annotations. MyBatis is free software that is distributed under the Apache License 2.0
+
+
+
+
+H2-Database
+------------
+H2 is a relational database management system written in Java.
+It can be embedded in Java applications or run in client–server mode. H2 Database Engine
+
+-postgres
+
+
+-mysql
+
+
+
+
+connecting the SpringData JPA and H2
+go to the pom.XML file add the following dependencies
+jpa and h2 dependencies
+
+		<dependency>
+	    <groupId>org.springframework.boot</groupId>
+    	<artifactId>spring-boot-starter-data-jpa</artifactId>
+	</dependency>
+
+	<dependency>
+    	<groupId>com.h2database</groupId>
+    	<artifactId>h2</artifactId>
+    	<version>2.3.232</version>
+    	<scope>runtime</scope>
+	</dependency>
+
+
+add the db to app in application.properties file as follows
+-
+/*
+# Enable H2 console
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+*/
+
+spring.datasource.url=jdbc:h2:mem:testdb
+# JavaDataBaseConnectivity(/mySQL/Posstgress) :Database type-H2 : memory(in m/y database): database name
+spring.datasource.driverClassName=org.h2.Driver
+

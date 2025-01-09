@@ -9,5 +9,5 @@ public class SpringMvcGetAndPutMtdsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringMvcGetAndPutMtdsApplication.class, args);
 	}
-
 }
+ 
